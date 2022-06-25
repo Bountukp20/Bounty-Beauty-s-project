@@ -1,34 +1,5 @@
-const result = document.getElementById("result");
-
-const buttons = document.getElementsByClassName("button");
-
-const Operation = (e) => {
-  const valueOfArguments = e.target.value;
-  if (
-    valueOfArguments != "=" &&
-    valueOfArguments != "AC" &&
-    valueOfArguments != "CLEAN"
-  ) {
-    result.value += e.target.value.trim();
-  }
-  if (valueOfArguments == "=") {
-    if (result.value == "2+2") {
-      result.value = "🐠";
-      return;
-    }
-
-    result.value = eval(result.value);
-  }
-
-  if (valueOfArguments == "AC") {
-    result.value = "";
-  }
-
-  if (valueOfArguments == "CLEAN") {
-    result.value = result.value.slice(0, -1);
-  }
-};
-
-for (i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener("click", Operation);
+function readMe(){
+  var show = document.getElementById("show");
+  show.innerText = "Hello, I am Ukpong Bounty Beauty, I am 154cm tall and I'm a Nigerian."
+  show.style.color = "darkred"
 }
